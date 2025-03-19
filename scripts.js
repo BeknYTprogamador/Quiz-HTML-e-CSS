@@ -32,7 +32,7 @@ const quizData = [
         ]
     },
     {
-        question: "Do que se trata a última atualização?",
+        question: "Do que se trata a última atualização do HTML?",
         answers: [
             { text: "Criação de tags", correct: false },
             { text: "Responsividade", correct: true },
