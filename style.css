@@ -48,3 +48,47 @@ body {
     background-color: #F44336; /* Vermelho para errado */
     color: white;
 }
+
+/* Responsividade para tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 50px 0px 0px 0px;
+    }
+
+    .quiz-container {
+        max-width: 90%; /* Reduz o tamanho no tablet */
+        height: auto; /* Altura automática */
+        padding: 50px; /* Reduz o padding */
+    }
+
+    .question {
+        font-size: 1.1em;
+    }
+
+    .answer-btn {
+        font-size: 0.9em; /* Tamanho menor dos botões */
+    }
+}
+
+/* Responsividade para celulares (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 20px 0px 0px 0px;
+    }
+
+    .quiz-container {
+        max-width: 100%; /* Usa a largura total da tela */
+        height: auto;
+        padding: 20px; /* Reduz ainda mais o padding */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
+    }
+
+    .question {
+        font-size: 1em; /* Fonte menor para caber na tela */
+    }
+
+    .answer-btn {
+        font-size: 0.8em;
+        padding: 8px; /* Botões menores */
+    }
+}
