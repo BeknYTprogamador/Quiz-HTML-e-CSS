@@ -3,92 +3,89 @@ body {
     text-align: center;
     background: #f4f4f4;
     color: #333;
-    padding: 90px 0px 0px 0px;
-    align-items: center;
-    max-height: 100vh;
+    padding: 0; /* Removendo o padding inicial */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
 }
 
 .quiz-container {
-    max-width: 800px;
-    height: 300px;
-    margin: auto;
+    width: 90%; /* Adapta à largura da tela */
+    max-width: 500px; /* Limita o tamanho no desktop */
+    height: auto; /* Altura automática para conteúdo variável */
     background: white;
-    padding: 100px;
+    padding: 20px; /* Ajuste de padding para dispositivos menores */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Mantém a estrutura vertical */
+    justify-content: center;
+    align-items: center;
 }
 
 .question {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 20px; /* Adiciona espaçamento inferior */
+    text-align: center;
 }
 
 .answer-btn {
     display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
+    width: 100%; /* Botões ocupam toda a largura disponível */
+    max-width: 400px; /* Limita o tamanho dos botões */
+    margin: 10px 0; /* Espaçamento entre os botões */
+    padding: 12px; /* Mais espaço nos botões para toque em telas pequenas */
     border: none;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .answer-btn:hover {
     background-color: #ddd;
+    transform: scale(1.05); /* Pequeno efeito de "zoom" ao passar o mouse */
 }
 
 .answer-btn.correct {
-    background-color: #4CAF50; /* Verde para correto */
+    background-color: #4CAF50; /* Verde para respostas corretas */
     color: white;
 }
 
 .answer-btn.wrong {
-    background-color: #F44336; /* Vermelho para errado */
+    background-color: #F44336; /* Vermelho para respostas erradas */
     color: white;
 }
 
-/* Responsividade para tablets (max-width: 768px) */
+/* Responsividade para telas menores (tablets e celulares) */
 @media screen and (max-width: 768px) {
-    body {
-        padding: 50px 0px 0px 0px;
-    }
-
     .quiz-container {
-        max-width: 90%; /* Reduz o tamanho no tablet */
-        height: auto; /* Altura automática */
-        padding: 50px; /* Reduz o padding */
+        padding: 15px; /* Reduz o padding em dispositivos menores */
     }
 
     .question {
-        font-size: 1.1em;
+        font-size: 1.1em; /* Reduz o tamanho da fonte */
     }
 
     .answer-btn {
-        font-size: 0.9em; /* Tamanho menor dos botões */
+        font-size: 0.9em; /* Botões ajustados */
+        padding: 10px; /* Menor padding para telas menores */
     }
 }
 
-/* Responsividade para celulares (max-width: 480px) */
 @media screen and (max-width: 480px) {
-    body {
-        padding: 20px 0px 0px 0px;
-    }
-
     .quiz-container {
-        max-width: 100%; /* Usa a largura total da tela */
-        height: auto;
-        padding: 20px; /* Reduz ainda mais o padding */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
+        padding: 10px; /* Padding ainda menor para telas muito pequenas */
     }
 
     .question {
-        font-size: 1em; /* Fonte menor para caber na tela */
+        font-size: 1em; /* Redução de fonte para caber na tela */
     }
 
     .answer-btn {
         font-size: 0.8em;
-        padding: 8px; /* Botões menores */
+        padding: 8px; /* Ajuste de padding para facilitar em telas pequenas */
     }
 }
